@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>HomePage</title>
+</head>
+<body>
+<h1 style="color: brown;text-align: center">Welcome to Bank of America</h1>
+<hr>
+<nav>
+    <ul>
+        <li><a th:href="@{/bank/offers}">Check Offers</a></li>
+        <li><a th:href="@{/bank/balance}">Check Balance</a></li>
+        <li><a th:href="@{/bank/loan}">Loan Approval</a></li>
+    </ul>
+</nav>
+</body>
+</html>

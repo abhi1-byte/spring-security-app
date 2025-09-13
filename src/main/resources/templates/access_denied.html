@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Access Denied</title>
+</head>
+<body>
+<h1 style="color: brown;text-align: center">
+    You are not authorized to access this page, <span th:text="${#authentication.name}">User</span>!
+</h1>
+<a th:href="@{/bank/}">HomePage</a>
+</body>
+</html>

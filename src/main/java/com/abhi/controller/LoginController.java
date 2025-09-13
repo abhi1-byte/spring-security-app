@@ -1,37 +1,26 @@
 package com.abhi.controller;
 
-import com.abhi.service.IUserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class LoginController {
 
-    private IUserService userService;
-
-    @Autowired
-    public LoginController(IUserService userService) {
-        this.userService = userService;
-    }
-
-    @GetMapping("/login")
+    @GetMapping("/showLogin")
     public String showLogin() {
         System.out.println("LoginController.showLogin");
         return "custom_login";
     }
 
-
-    /*@PostMapping("/login")
-    public String validateLogin(@RequestParam String username, @RequestParam String password, Map<String,Object> model){
-        System.out.println("Impl os MODEL ::"+model.getClass().getName());
-        System.out.println("Username ::"+username+"Password ::"+password);
-        model.put("username",username);
-        return "login_success";
-    }*/
-
-    @GetMapping("/test")
-    public String validateUser() {
-        return "";
+    @GetMapping("/denial")
+    public String denialAccess() {
+        return "access_denied";
     }
+
+    @PostMapping("/logout-success")
+    public String showLogoutPage() {
+        return "logout-success"; // This is the name of your new HTML file
+    }
+
 }

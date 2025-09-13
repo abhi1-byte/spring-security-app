@@ -16,5 +16,15 @@
             <td><input type="submit" value="Login"></td>
             <td><input type="reset" value="cancel"></td>
         </tr>
+        <tr>
+            <!-- Remember Me checkbox -->
+            <td>
+                <label>
+                    <input type="checkbox" name="remember-me"/> Remember Me
+                </label>
+            </td>
+        </tr>
     </table>
+    <span style="color:red;text-align:center" th:if="${param.error}">Invalid Login details (authentication
+		failed)</span>
 </form>
